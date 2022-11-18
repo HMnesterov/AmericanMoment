@@ -1,7 +1,9 @@
 .option {
   display: none;
 }
-
+.djo {
+    display: flex;
+}
 .show {
   display: block;
 }

@@ -1,55 +1,92 @@
-{%  load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <link style>
-    <title>Добрый пожаловать на Китай партия принять тест</title>
+    <title>Добрый пожаловать</title>
 
     <link rel="stylesheet" href="{% static 'base.css' %}">
-    <script src="{% static 'base.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Добрый пожаловать на Китай партия принять тест</h1>
-<h2>Баллистическая ракета удар!!!!--->{%  for k, cum in ip.items %}
-{{ k }} ==> {{  cum}}
-    <br>
-{%  endfor  %}<---Баллистическая ракета удар!!!!</h2>
 
-<button data-rel="{% static 'танк.jpg' %}" id="ASong" onClick="playPause()" >
-  <audio
-    src="{% static 'social_credit.mp3' %}"
-    autoplay
-    loop
+<h1>Добрый время суток! Вас приветствовать Джо старик деменция.</h1>
+<h2>Что вы думать о коммунист?</h2>
 
-  > <a href="javascript:showImage()">show image</a></audio>
-  Song
+
+
+<button class="btn" id="ASong" onClick="playPause(); hello(this)">
+    <audio
+            src="{% static 'social_credit.mp3' %}"
+            autoplay
+            loop
+
+    ></audio>
+    Си Цзиньпинь лох!!
 </button>
+<div class="option">
+    <div id="wrapper">
+    <div id="container">
+        <h1>
+            ХА-ХА ТУПОЙ БУРГЕР ПОПАЛ В ЛОВУШКУ!!!
+            <br>ГРЯЗЬ ГАДОСТЬ НАЙДЕН
+    <br>
+    {% for k, cum in ip.items %}
+    {{ cum }}
+    <br>
 
+
+
+
+
+
+
+
+
+{% endfor %}Баллистическая ракета удар!!!!</h2></div>
+ </div>
+</div>
 <script>
-  var aud = document.getElementById("ASong").children[0];
-  var isPlaying = false;
-  aud.pause();
+    var aud = document.getElementById("ASong").children[0];
+    var isPlaying = false;
+    aud.pause();
 
-  function playPause() {
-    if (isPlaying) {
-      aud.pause();
-    } else {
-      aud.play();
+    function playPause() {
+        if (isPlaying) {
+            aud.pause();
+        } else {
+            aud.play();
+        }
+
+        isPlaying = !isPlaying;
     }
-    isPlaying = !isPlaying;
-  }
 
-  function showImage() {
-    var img = document.getElementById('танк.jpg');
-    img.style.visibility = 'visible';
-}
 
 </script>
-<div id="Play">Play Button</div>
-</body>
+<script>
+    const hello = (element) => {
+        element.hidden = true;
+        var body = document.getElementsByTagName('body')[0];
+document.body.style.backgroundImage = "url('static/-cat.jpg')"
 
+    }
+</script>
+
+
+
+<script>
+    $(".btn").click(function () {
+        $(".option").toggle('show');
+        $(".djo").toggle('show')
+    })
+</script>
+
+
+
+</body>
 
 
 </html>
